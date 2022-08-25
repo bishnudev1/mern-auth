@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+  <title>Register to new account</title>
+</head>
+<style>
+  .container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+  }
+  label{
+    font-size: 19px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 5px;
+  }
+  input{
+    height: 50px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  :-ms-input-placeholder{
+    font-size: 14px;
+  }
+  button{
+    padding: 10px;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+</style>
+<body>
+  {{>navbar}}
+  <div class="container">
+    <form action="/register" method="POST">
+      <label>Name</label>
+      <input type="text" value="" name="name" placeholder="Enter your name...">
+      <label>Email</label>
+      <input type="text" value="" name="email" placeholder="Enter your email...">
+      <label>Password</label>
+      <input type="text" value="" name="password" placeholder="Enter your password...">
+      <label>Confirm Password</label>
+      <input type="text" value="" name="cpassword" placeholder="Confirm your password...">
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</html>
